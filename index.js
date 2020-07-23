@@ -2,7 +2,9 @@ const express = require("express");
 const mongodb = require("mongodb");
 const bodyParser = require("body-parser");
 const app = express();
-const url = "mongodb://localhost:27017";
+const dotEnv = require("dotenv").config();
+// const url = "mongodb://localhost:27017";
+const url = process.env.DB;
 const cors = require("cors");
 
 app.use(bodyParser.json());
