@@ -58,6 +58,6 @@ app.get("/film/:id", async (req, res) => {
   res.json();
 });
 
-app.listen(4040, function () {
+app.listen(process.env.PORT || 4040, function () {
   console.log("Server Listening!");
 });
